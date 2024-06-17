@@ -14,12 +14,15 @@ export default function Home() {
 	}, []);
 
 	return (
-		<main className=" w-screen h-screen ">
+		<main className=" w-screen h-screen">
 			<div className=" flex flex-col">
 				<Title />
 				<div className=" w-full border border-gray-400" />
 				{timetable && (
-					<Timetable weekDayTimetable={timetable.student[1][1]} />
+					<Timetable
+						title="1-1"
+						weekDayTimetable={timetable.student[1][1]}
+					/>
 				)}
 			</div>
 		</main>
