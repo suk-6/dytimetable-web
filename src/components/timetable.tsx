@@ -7,14 +7,17 @@ import {
 } from "@/models/timetable";
 
 interface TimetableProps {
+	title?: string;
 	weekDayTimetable: WeekdayTimeTable;
 }
 
-export const Timetable = ({ weekDayTimetable }: TimetableProps) => {
+export const Timetable = ({ title, weekDayTimetable }: TimetableProps) => {
 	return (
 		<div className="w-full max-w-4xl mx-auto p-6 sm:p-8">
 			<div className="grid grid-cols-6 gap-4 mb-4">
-				<div className="bg-gray-100 rounded-md py-2 px-4 font-medium text-center"></div>
+				<div className="bg-gray-100 rounded-md py-2 px-4 font-medium text-center">
+					{title ? title : "시간표"}
+				</div>
 				{Object.values(WeekdayString).map(
 					(weekday: string, i: number) => {
 						if (i === 0 || i === 6) return;
