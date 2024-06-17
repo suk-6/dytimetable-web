@@ -1,6 +1,10 @@
 import Image from "next/image";
 
-export const Title = () => {
+interface TitleProps {
+	children?: React.ReactNode;
+}
+
+export const Title = ({ children }: TitleProps) => {
 	return (
 		<div className=" flex-1 p-3">
 			<div className=" flex flex-row">
@@ -12,8 +16,8 @@ export const Title = () => {
 						height={640}
 					/>
 				</div>
-
 				<h1 className=" text-4xl font-bold">덕영시간표</h1>
+				{children && <div className=" mr-4 ml-auto">{children}</div>}
 			</div>
 		</div>
 	);
