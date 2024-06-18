@@ -13,7 +13,7 @@ interface TimetableProps {
 
 export const Timetable = ({ title, weekDayTimetable }: TimetableProps) => {
 	return (
-		<div className="w-full max-w-4xl mx-auto p-6">
+		<div className="w-full max-w-3xl mx-auto p-6">
 			<div className="grid grid-cols-6 gap-4 mb-4">
 				<div className="bg-gray-100 rounded-md py-2 px-4 font-medium text-center">
 					{title ? title : "시간표"}
