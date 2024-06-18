@@ -7,7 +7,7 @@ interface TitleProps {
 export const Title = ({ children }: TitleProps) => {
 	return (
 		<div className=" flex-1 p-3">
-			<div className=" flex flex-row">
+			<div className=" flex flex-row h-full">
 				<div className=" w-10 h-10 mr-3">
 					<Image
 						src="/assets/logo.png"
@@ -17,7 +17,9 @@ export const Title = ({ children }: TitleProps) => {
 					/>
 				</div>
 				<h1 className=" text-4xl font-bold">덕영시간표</h1>
-				{children && <div className=" mr-4 ml-auto">{children}</div>}
+				{children && (
+					<div className=" mr-4 ml-auto h-full">{children}</div>
+				)}
 			</div>
 		</div>
 	);
