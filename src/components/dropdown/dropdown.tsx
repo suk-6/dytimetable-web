@@ -3,6 +3,10 @@ import { CSSTransition } from "react-transition-group";
 
 import "./dropdown.css";
 
+interface DropdownProps {
+	setOpen: (_: boolean) => void;
+}
+
 interface DropdownItemProps {
 	leftIcon?: React.ReactNode;
 	rightIcon?: React.ReactNode;
@@ -12,11 +16,10 @@ interface DropdownItemProps {
 	fkey?: number;
 }
 
-export const Dropdown = () => {
+export const Dropdown = ({ setOpen }: DropdownProps) => {
 	const [selectedGrade, setSelectedGrade] = useState<number | null>(null);
 	const [activeMenu, setActiveMenu] = useState<string>("main");
 	const [menuHeight, setMenuHeight] = useState<number | null>(null);
-	const dropdownRef = useRef(null);
 
 	const calcHeight = (el: HTMLElement | null) => {
 		if (el) {
@@ -56,6 +59,8 @@ export const Dropdown = () => {
 	const selectClassroom = (classroomNo: number) => {
 		localStorage.setItem("mode", "classroom");
 		localStorage.setItem("classroom", `${selectedGrade}-${classroomNo}`);
+		setActiveMenu("main");
+		setOpen(false);
 	};
 
 	return (
