@@ -66,7 +66,7 @@ export const Dropdown = ({ setOpen, func }: DropdownProps) => {
 
 	return (
 		<div
-			className={`flex flex-row h-[${menuHeight}px] absolute top-10 right-3 bg-gray-300 border rounded-md p-4 overflow-hidden transition-height duration-500 w-56`}
+			className={`flex flex-row h-[${menuHeight}px] absolute top-16 right-6 bg-gray-300 border rounded-md p-4 overflow-hidden transition-height duration-500 w-56`}
 		>
 			<CSSTransition
 				in={activeMenu === "main"}
