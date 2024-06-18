@@ -58,7 +58,12 @@ export default function Home() {
 			<div className=" flex flex-col w-full h-full">
 				<div>
 					<Title>
-						<button onClick={() => setOpen(!open)}>열기</button>
+						<button
+							onClick={() => setOpen(!open)}
+							className=" h-full flex items-center justify-center bg-gray-100 rounded-md px-4 py-2 transition-colors hover:bg-gray-300"
+						>
+							설정
+						</button>
 						{open && <Dropdown setOpen={setOpen} func={refresh} />}
 					</Title>
 					<div className=" w-full border border-gray-400" />
