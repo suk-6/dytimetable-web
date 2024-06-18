@@ -1,0 +1,15 @@
+.menu-enter {
+	transform: translateX(100%);
+}
+.menu-enter-active {
+	transform: translateX(0);
+	transition: all 500ms ease;
+}
+.menu-exit {
+	position: absolute;
+	transform: translateX(0);
+}
+.menu-exit-active {
+	transform: translateX(-110%);
+	transition: all 500ms ease;
+}
