@@ -5,6 +5,7 @@ import "./dropdown.css";
 
 interface DropdownProps {
 	setOpen: (_: boolean) => void;
+	func?: () => void;
 }
 
 interface DropdownItemProps {
@@ -16,7 +17,7 @@ interface DropdownItemProps {
 	fkey?: number;
 }
 
-export const Dropdown = ({ setOpen }: DropdownProps) => {
+export const Dropdown = ({ setOpen, func }: DropdownProps) => {
 	const [selectedGrade, setSelectedGrade] = useState<number | null>(null);
 	const [activeMenu, setActiveMenu] = useState<string>("main");
 	const [menuHeight, setMenuHeight] = useState<number | null>(null);
@@ -59,8 +60,8 @@ export const Dropdown = ({ setOpen }: DropdownProps) => {
 	const selectClassroom = (classroomNo: number) => {
 		localStorage.setItem("mode", "classroom");
 		localStorage.setItem("classroom", `${selectedGrade}-${classroomNo}`);
-		setActiveMenu("main");
 		setOpen(false);
+		func && func();
 	};
 
 	return (
