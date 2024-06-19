@@ -14,7 +14,7 @@ interface TimetableProps {
 export const Timetable = ({ title, weekDayTimetable }: TimetableProps) => {
 	return (
 		<div className="w-full max-w-3xl mx-auto p-6">
-			<div className="grid grid-cols-6 gap-4 mb-4">
+			<div className="grid grid-cols-6 gap-3 mb-3">
 				<div className="bg-gray-100 rounded-md py-2 px-4 font-medium text-center">
 					{title ? title : "시간표"}
 				</div>
@@ -32,8 +32,8 @@ export const Timetable = ({ title, weekDayTimetable }: TimetableProps) => {
 					}
 				)}
 			</div>
-			<div className="grid grid-cols-6 gap-4">
-				<div className="grid grid-rows-7 gap-4">
+			<div className="grid grid-cols-6 gap-3">
+				<div className="grid grid-rows-7 gap-3">
 					{Array.from({ length: 7 }, (_, i) => i + 1).map(
 						(i: number) => {
 							return (
@@ -50,7 +50,7 @@ export const Timetable = ({ title, weekDayTimetable }: TimetableProps) => {
 				{Object.values(weekDayTimetable).map(
 					(classPeriods: ClassPeriod[], day: number) => {
 						return (
-							<div key={day} className="grid grid-rows-7 gap-4">
+							<div key={day} className="grid grid-rows-7 gap-3">
 								{classPeriods.map(
 									(classPeriod: ClassPeriod) => {
 										return (
