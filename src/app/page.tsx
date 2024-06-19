@@ -11,7 +11,7 @@ import { BeatLoader } from "react-spinners";
 export default function Home() {
 	const [timetable, setTimetable] = useState<TimeTableModel>();
 	const [open, setOpen] = useState<boolean>(false);
-	const [mode, setMode] = useState<string | null>(null);
+	const [mode, setMode] = useState<string>("home");
 	const [grade, setGrade] = useState<GradeT | null>(null);
 	const [classroomNo, setClassroomNo] = useState<ClassroomNoT | null>(null);
 	const [isLoading, setIsLoading] = useState<boolean>(true);
@@ -19,7 +19,7 @@ export default function Home() {
 	const a = ClassroomNo.Classroom1;
 
 	const refresh = async () => {
-		setMode(localStorage.getItem("mode"));
+		setMode(localStorage.getItem("mode")!);
 		setGrade(
 			(() => {
 				const gradeString = localStorage
