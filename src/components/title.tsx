@@ -18,7 +18,7 @@ export const Title = ({ children }: TitleProps) => {
 				</div>
 				<h1 className=" text-4xl font-bold">덕영시간표</h1>
 				{children && (
-					<div className=" mr-4 ml-auto h-full">{children}</div>
+					<div className=" mr-3 ml-auto h-full">{children}</div>
 				)}
 			</div>
 		</div>
