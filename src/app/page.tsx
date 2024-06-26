@@ -54,7 +54,7 @@ export default function Home() {
 	}, []);
 
 	return (
-		<main className=" w-screen h-screen min-w-[550px]">
+		<main className=" w-screen h-screen">
 			<div className=" flex flex-col w-full h-full">
 				<div>
 					<Title>
