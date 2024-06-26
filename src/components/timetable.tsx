@@ -58,7 +58,7 @@ export const Timetable = ({ title, weekDayTimetable }: TimetableProps) => {
 												key={classPeriod.classTime}
 												className="bg-white rounded-md p-4 flex flex-col gap-1 border border-gray-100 shadow-sm"
 											>
-												<div className="font-medium">
+												<div className="font-medium text-nowrap">
 													{classPeriod.subject}
 												</div>
 												<div className="text-gray-500 dark:text-gray-400">
