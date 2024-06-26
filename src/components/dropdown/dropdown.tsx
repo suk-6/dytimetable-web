@@ -76,6 +76,7 @@ export const Dropdown = ({ setOpen, func }: DropdownProps) => {
 				onEnter={calcHeight}
 			>
 				<div className="w-full">
+					<DropdownItem goToMenu="main">전체</DropdownItem>
 					<DropdownItem goToMenu="classroom-1">학급</DropdownItem>
 				</div>
 			</CSSTransition>
